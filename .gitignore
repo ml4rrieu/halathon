@@ -2,7 +2,7 @@
 /__pycache__
 /.ipynb_checkpoints
 /misc
-/data
+data/*
 
 code_no_jupyter.py
 code_test.py

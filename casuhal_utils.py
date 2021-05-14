@@ -110,7 +110,7 @@ def query_perm(doi) :
 		req = requests.get(f"https://permissions.shareyourpaper.org/doi/{doi}")
 		res = req.json()
 	except : 
-		print("doi problem w permissions")
+		print("doi problem w permissions", doi)
 		return {}
 	
 	try : 
