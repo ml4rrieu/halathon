@@ -1,7 +1,8 @@
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL.
 
 
-##Fonctionnement
+## Fonctionnement
+
 Récupérer les DOIs via ScanR, les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
 
 1. "Récupérer le PDF publisher et mailto auteur pour accord" 
@@ -28,6 +29,8 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 - Ouvrir le tableau produit _dois_a_traiter_formula.csv_ avec libreOffice
 - Réaliser toutes les actions mentionnées dans la colonne _todo_
 
+<br />
+
 ## Schéma de données
 
 | métadonnée           |     explication                                                              |     remarque                                 |
@@ -43,10 +46,15 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 | deposit_condition    | les conditions pour le dépôt en archive  _version_ ; _licence_ ; _fin d'embargo_ | acceptedVersion ; cc-by-nc-nd ; 2021-01-01   |
 | todo                 | action à réaliser manuellement                                               |                 |
 
+<br />
+
 ## Outil
+
 - [Récupérer les DOI de son établissements](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/scanr_utils.py)
 - [Unpaywall](https://www.unpaywall.org/)
 - [Persmissions](https://shareyourpaper.org/permissions)
+
+<br />
 
 
 ## Statistiques
@@ -54,8 +62,9 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 _à venir_
 
 
+<br />
 
-**Disclaimer**
+## Disclaimer
 
 > [the information provided] make no legal representations as to the accuracy, completeness, suitability or validity of any data or information on this site and will not be liable for any errors or omissions in this data and information or for any losses, injuries or damages arising from its display or use
 
