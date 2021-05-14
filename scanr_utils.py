@@ -69,8 +69,11 @@ def get_publications_with_doi(structure, min_year, verbose = False):
     dfs = []
     for year in range(min_year, 2021):
         dfs.append(get_publications_one_year(structure, year, verbose))
-    df = pd.concat(dfs)
-    df = df.sort_values(by='year').reset_index()
-    del df['index']
-    return df
+    if dfs : 
+        df = pd.concat(dfs)
+        df = df.sort_values(by='year').reset_index()
+        del df['index']
+        return df
+    else : 
+        return pd.DataFrame()
 
