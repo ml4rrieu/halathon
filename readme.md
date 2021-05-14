@@ -1,7 +1,7 @@
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL.
 
 
-## Fonctionnement
+### Fonctionnement
 
 Récupérer les DOIs via ScanR, les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
 
@@ -22,7 +22,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 <br />
 
-## Reproduire pour son établissement
+### Reproduire pour son établissement
 
 - Assurez vous de pouvoir lire, modifier, exécuter des notebook Jupyter
 - Télécharger le .zip du projet
@@ -33,12 +33,13 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 - Réaliser toutes les actions mentionnées dans la colonne _todo_
 
 **pour tester**
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke2.mybinder.org/user/ml4rrieu-halathon-j1jiw4ew/notebooks/2021_halathon.ipynb)
 
 
 <br />
 
-## Schéma de données
+### Schéma de données
 
 | métadonnée           |     explication                                                              |     remarque                                 |
 |----------------------|------------------------------------------------------------------------------|----------------------------------------------|
@@ -55,7 +56,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 <br />
 
-## Outil
+### Outils
 
 - Notebook scanr [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
 - [Unpaywall](https://www.unpaywall.org/)
@@ -64,14 +65,14 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 <br />
 
 
-## Statistiques
+### Statistiques
 
 _à venir_
 
 
 <br />
 
-## Disclaimer
+### Disclaimer
 
 > [the information provided] make no legal representations as to the accuracy, completeness, suitability or validity of any data or information on this site and will not be liable for any errors or omissions in this data and information or for any losses, injuries or damages arising from its display or use
 
