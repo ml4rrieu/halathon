@@ -1,10 +1,9 @@
 
-/misc
-/.ipynb_checkpoints
-/data
 /__pycache__
+/.ipynb_checkpoints
+/misc
+/data
 
 code_no_jupyter.py
 code_test.py
-
 temp.py
