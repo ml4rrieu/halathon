@@ -23,13 +23,18 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 <br />
 
 ## Reproduire pour son établissement
+
 - Assurez vous de pouvoir lire, modifier, exécuter des notebook Jupyter
 - Télécharger le .zip du projet
-- Renseigner votre email pour les requêtes Unpaywall `casuhal_utils.py` ligne 40
+- Renseigner votre email pour les requêtes Unpaywall _casuhal_utils.py_ ligne 40
 - Ouvrer le notebook  _2021_halathon.ipynb_ 
 - Réaliser toutes les étapes
-- Ouvrir le tableau produit _dois_a_traiter_formula.csv_ avec libreOffice
+- Ouvrir le tableau produit _data\dois_a_traiter_formula.csv_ avec libreOffice
 - Réaliser toutes les actions mentionnées dans la colonne _todo_
+
+**pour tester**
+[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke2.mybinder.org/user/ml4rrieu-halathon-j1jiw4ew/notebooks/2021_halathon.ipynb)
+
 
 <br />
 
@@ -52,7 +57,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 ## Outil
 
-- [Récupérer les DOI de son établissements](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/scanr_utils.py)
+- Notebook scanr [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
 - [Unpaywall](https://www.unpaywall.org/)
 - [Persmissions](https://shareyourpaper.org/permissions)
 
