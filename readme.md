@@ -5,22 +5,24 @@ Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciences
 
 Récupérer les DOIs via ScanR, les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
 
-1. "Récupérer le PDF publisher et mailto auteur pour accord" 
+1. **Récupérer le PDF publisher et mailto auteur pour accord** 
 la politique du publisher autorise le partage en archive ouverte de la version éditée. Reste à contacter l'auteur pour avoir son accord.
 
-2.  "Selon licence ajouter PDF editeur"
+2.  **Selon licence ajouter PDF editeur**
 la publication est en accès ouvert sur le site du publisher avec présence d'une licence. Si celle-ci le permet (CC-BY ...) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation)
 
-3. "Mailto auteur pour appliquer LRN"
+3. **Mailto auteur pour appliquer LRN**
 Solliciter l'auteur afin qu'il applique la LRN.
 
-4. "verifier identifiants notice"
+4. **verifier identifiants notice**
 La publication est dans HAL et Unpaywall l'a trouvée en accès ouvert sur le web mais HAL n'a pas fait le lien (métadonnée *linkExtId*). Vérifier les identifiants (DOI, Arxiv) de la notice HAL .
 
-5. "creer/retrouver notice"
+5. **creer/retrouver notice**
 le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice correspondante n'est pas déjà présente sinon l'a créer.
 
-**Reproduire pour son établissement**
+<br />
+
+## Reproduire pour son établissement
 - Assurez vous de pouvoir lire, modifier, exécuter des notebook Jupyter
 - Télécharger le .zip du projet
 - Renseigner votre email pour les requêtes Unpaywall `casuhal_utils.py` ligne 40
