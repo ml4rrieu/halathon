@@ -1,9 +1,7 @@
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL.
 
-**Idée**
-Effectuer le maximum de dépôt en autonomie, solliciter les auteurs en dernier recours.
 
-**Fonctionnement**
+##Fonctionnement
 Récupérer les DOIs via ScanR, les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
 
 1. "Récupérer le PDF publisher et mailto auteur pour accord" 
@@ -24,13 +22,13 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 **Reproduire pour son établissement**
 - Assurez vous de pouvoir lire, modifier, exécuter des notebook Jupyter
 - Télécharger le .zip du projet
-- Renseigner votre email pour les requêtes Unpaywall `casuhal_utils.py` lignes 40
+- Renseigner votre email pour les requêtes Unpaywall `casuhal_utils.py` ligne 40
 - Ouvrer le notebook  _2021_halathon.ipynb_ 
 - Réaliser toutes les étapes
 - Ouvrir le tableau produit _dois_a_traiter_formula.csv_ avec libreOffice
 - Réaliser toutes les actions mentionnées dans la colonne _todo_
 
-**Schéma de données**
+## Schéma de données
 
 | métadonnée           |     explication                                                              |     remarque                                 |
 |----------------------|------------------------------------------------------------------------------|----------------------------------------------|
@@ -45,19 +43,16 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 | deposit_condition    | les conditions pour le dépôt en archive  _version_ ; _licence_ ; _fin d'embargo_ | acceptedVersion ; cc-by-nc-nd ; 2021-01-01   |
 | todo                 | action à réaliser manuellement                                               |                 |
 
-**Statistiques**
-
-**Outil**
+## Outil
 - [Récupérer les DOI de son établissements](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/scanr_utils.py)
 - [Unpaywall](https://www.unpaywall.org/)
 - [Persmissions](https://shareyourpaper.org/permissions)
 
 
-**Disclaimer**
+## Statistiques
 
+_à venir_
 
-**Limites**
-les DOI sont ceux de ScanR
 
 
 **Disclaimer**
