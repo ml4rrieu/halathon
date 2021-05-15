@@ -10,5 +10,5 @@ les fichiers produits :
 
 - _dois_a_traiter.csv_ fichier final avec les données brutes
 
-- _dois_a_traiter_formules.csv_ fichier finale avec les hyperliens pour faciliter la lecture : ouvrir avec libreOffice
+- _dois_a_traiter_formules.csv_ fichier final avec les hyperliens pour faciliter la lecture : ouvrir avec libreOffice
 
