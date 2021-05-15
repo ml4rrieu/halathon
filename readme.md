@@ -72,7 +72,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 pour l'université de Paris avec les DOIs de 2021 venant de Scopus
 ```
-nb de DOI a traiter 									1063
+nb de DOI a traiter                                     1063
 mailto auteur pour appliquer LRN                        568
 creer/retrouver notice                                  266
 selon licence ajouter PDF editeur                       208
