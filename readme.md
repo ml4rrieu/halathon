@@ -1,4 +1,4 @@
-[!](https://casuhal2021.sciencesconf.org/data/pages/Bandeau_Casuhalaton.jpg)
+![bandeau Casuhalathon](https://casuhal2021.sciencesconf.org/data/pages/Bandeau_Casuhalaton.jpg)
 
 
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL.
