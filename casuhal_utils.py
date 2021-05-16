@@ -178,11 +178,11 @@ def deduce_todo(row) :
 	
 	#1. si possible archiver la publishedVersion 
 	if "publishedVersion" in str(row["deposit_condition"]) :
-		return "recuperer pdf publisher et mailto auteur pour accord"
+		return "recuperer PDF publisher et mailto auteur pour accord"
 
 	#2. si publisher license AND NOT oa via reop
 	if row["oa_publisher_license"] and not row["oa_repo_link"] :
-		return "selon licence ajouter PDF editeur"
+		return "selon licence ajouter PDF publisher"
 
 	#3. si LRN applicable envoyer email incitation
 	if row["upw_state"] != "open" and row["has_issn"] : 
@@ -192,7 +192,7 @@ def deduce_todo(row) :
 	if row["halId"] and row["linkExtId"] == "" and row["upw_state"] == "open" :
 		return "verifier identifiants notice"
 
-	#4. si publication pas dans HAL l'ajouter
+	#4. si ce n'est pas dans HAL
 	if row["halId"] == "" :
 		return "creer/retrouver notice"
 	
