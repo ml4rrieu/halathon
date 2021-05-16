@@ -1,27 +1,29 @@
+[![Bandeau Casuhalathon]](https://casuhal2021.sciencesconf.org/data/pages/Bandeau_Casuhalaton.jpg)(https://casuhal2021.sciencesconf.org/resource/page/id/8)
+
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL.
 
 
 ## Fonctionnement
 
-Récupérer les DOIs (scanR et autres bases), les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
+Récupérer les DOIs (scanR et/ou autres), les enrichir avec HAL, Unpaywall et Permissions. Selon les données récoltées déduire 5 actions à réaliser manuellement : 
 
 1. **Récupérer le PDF publisher et mailto auteur pour accord** 
 
 la politique du publisher autorise le partage en archive ouverte de la version éditée. Reste à contacter l'auteur pour avoir son accord.
 
-2.  **Selon licence ajouter PDF editeur**
+2.  **Selon licence ajouter PDF publisher**
 
 la publication est en accès ouvert sur le site du publisher avec présence d'une licence. Si celle-ci le permet (CC-BY ...) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation)
 
 3. **Mailto auteur pour appliquer LRN**
 
-Solliciter l'auteur afin qu'il applique la LRN.
+Solliciter l'auteur afin qu'il applique la loi pour une République Numérique
 
-4. **Verifier identifiants notice**
+4. **Vérifier identifiants notice**
 
 La publication est dans HAL et Unpaywall l'a trouvée en accès ouvert sur le web mais HAL n'a pas fait le lien (métadonnée *linkExtId*). Vérifier les identifiants (DOI, Arxiv) de la notice HAL .
 
-5. **Creer/retrouver notice**
+5. **Créer/retrouver notice**
 
 le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice correspondante n'est pas déjà présente sinon l'a créer.
 
@@ -61,7 +63,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 ### Outils
 
-- Notebook scanr [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
+- Notebook ScanR [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
 - [Unpaywall](https://www.unpaywall.org/)
 - [Persmissions](https://shareyourpaper.org/permissions)
 
@@ -70,7 +72,7 @@ le DOI n'a pas été trouvé dans HAL. Vérifier par le titre si une notice corr
 
 ### Statistiques
 
-pour l'université de Paris avec les DOIs de 2021 venant de Scopus
+pour l'université de Paris avec des DOIs de 2021 venant de Scopus
 ```
 nb de DOI a traiter                                     1063
 mailto auteur pour appliquer LRN                        568
