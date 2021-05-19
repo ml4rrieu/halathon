@@ -8,6 +8,7 @@ Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciences
 ## Fonctionnement
 
 Étapes du code : 1. récupérer les DOIs de son établissement. Cela peut être effectué à l'aide d'un fichier local et/ou en utilisant l'API de ScanR. 2. enrichir les DOIs en utilisant HAL, Unpaywall et Permissions. 3. déduire à partir des données reccueillies des actions à réaliser. 
+
 Cinq actions, à réaliser manuellement, sont différenciées : 
 
 * **Récupérer le PDF publisher et mailto auteur pour accord** :green_book: :pencil: 
