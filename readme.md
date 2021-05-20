@@ -13,15 +13,15 @@ Cinq actions, à réaliser manuellement, sont différenciées :
 
 * **Récupérer le PDF publisher et mailto auteur pour accord** :green_book: :pencil: 
 
-La politique du publisher autorise le partage en archive ouverte de la version éditée (eg. la revue [Physical Review B](https://aurehal.archives-ouvertes.fr/journal/read/id/153339)). Reste alors à contacter l'auteur pour avoir son accord.
+La publication n'est pas en accès ouvert mais la politique du publisher autorise le partage en archive de la version éditée (eg. la revue [Physical Review B](https://aurehal.archives-ouvertes.fr/journal/read/id/153339)). Reste alors à contacter l'auteur pour avoir son accord.
 
 *  **Selon licence ajouter PDF publisher** :green_book:
 
-La publication est en accès ouvert sur le site du publisher avec la mention d'une licence ouverte. Si celle-ci le permet (eg. les Creative Commons) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation).
+La publication est en accès ouvert sur le site du publisher avec la mention d'une licence. Si celle-ci le permet (eg. les Creative Commons) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation).
 
 * **Mailto auteur pour appliquer LRN** :pencil:
 
-Solliciter l'auteur afin qu'il applique la Loi pour une République Numérique.
+La publication n'est pas en accès ouvert, solliciter l'auteur afin qu'il applique la Loi pour une République Numérique.
 
 * **Vérifier identifiants notice** :link:
 
@@ -29,7 +29,7 @@ La publication est référencée dans HAL, elle est bien marquée _open access_ 
 
 * **Créer/retrouver notice** :mag_right:
 
-Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL afin de rectifier un éventuel oubli du DOI, sinon créer la notice.
+Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL afin de rectifier un éventuel oubli du DOI, créer la notice si nécessaire.
 
 <br />
 

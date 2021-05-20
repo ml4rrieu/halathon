@@ -55,7 +55,7 @@ def query_upw(doi) :
 	# if it is open		
 	temp = {
 	"upw_state" : "open",
-	"published_date" : res["published_date"],
+	"published_date" : res.get("published_date"),
 	"oa_publisher_license" : "",
 	"oa_publisher_link" : "", 
 	"oa_repo_link" : ""
