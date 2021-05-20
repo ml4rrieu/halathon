@@ -48,7 +48,7 @@ def query_upw(doi) :
 	if not res.get("oa_locations") : 
 		return { 
 		"upw_state" : "closed",
-		"published_date" : res["published_date"],
+		"published_date" : res.get("published_date"),
 		"has_issn" : True if res.get("journal_issns") else False
 		}
 
