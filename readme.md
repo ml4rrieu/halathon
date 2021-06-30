@@ -77,7 +77,7 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 
 ### Statistiques
 
-pour l'université de Paris avec des DOIs de 2021 venant de Scopus
+Obtenues pour Université de Paris avec des DOIs de 2021 venant de Scopus
 ```
 nb de DOI a traiter                                     1062
 mailto auteur pour appliquer LRN                        564
@@ -86,4 +86,13 @@ selon licence ajouter PDF publisher                     204
 verifier identifiants notice                              5
 recuperer PDF publisher et mailto auteur pour accord      5
 ```
+Traitements réalisés à Université de Paris (sur 3 semaines)
+```
+DOI traités                                             200
+mails envoyés                                           96
+PDF publisher ajoutés                                   49
+notices créées                                          53
+```
+
+
 Partagez les votres en issue dans github 
