@@ -96,7 +96,7 @@ Partagez les votres en issue dans github
 
 -------
 
-Université Paris Cité
+Mémo Université Paris Cité
 
 * faculté S&H req scopus 
 
