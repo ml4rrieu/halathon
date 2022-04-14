@@ -2,7 +2,10 @@
 /__pycache__
 /.ipynb_checkpoints
 /misc
+/verif
 
+produce_req_scopus.ipynb
+test_dois.csv
 code_no_jupyter.py
 code_test.py
 temp.py

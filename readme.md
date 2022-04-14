@@ -2,9 +2,6 @@
 Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL. Le code récupère des données sur les publications et déduit des actions à réaliser. Les actions sont à réaliser manuellement.
 
 
-![bandeau Casuhalathon](https://casuhal2021.sciencesconf.org/data/pages/Bandeau_Casuhalaton.jpg)
-
-
 ## Fonctionnement
 
 Étapes du code : 1. récupérer les DOIs de son établissement. Cela peut être effectué à l'aide d'un fichier local et/ou en utilisant l'API de ScanR. 2. enrichir les DOIs en utilisant HAL, Unpaywall et Permissions. 3. déduire à partir des données reccueillies des actions à réaliser. 
@@ -35,10 +32,9 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 
 ## Reproduire pour son établissement
 
-- Assurez-vous de pouvoir modifier et exécuter des notebooks Jupyter
 - Télécharger le .zip du projet
-- Renseigner votre email pour les requêtes Unpaywall dans le fichier _casuhal_utils.py_ ligne 40
-- Ouvrir le notebook  _2021_halathon.ipynb_ 
+- Renseigner votre email pour les requêtes Unpaywall dans le fichier _casuhal_utils.py_
+- Ouvrir le notebook  _2022_halathon.ipynb_ 
 - Réaliser toutes les étapes du notebook
 - Ouvrir le tableau produit _data\dois_a_traiter_formula.csv_ avec libreOffice
 - Déposez massivement :boom::boom::boom:
@@ -61,7 +57,7 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 | oa_publisher_license | licence présente sur le site de l'éditeur                                    | CC-BY                                        |
 | oa_publisher_link    | lien vers le PDF sur le site de l'éditeur                                    |                                              |
 | oa_repo_link         | lien vers le PDF disponible en archive                                       |                                              |
-| deposit_condition    | les conditions pour le dépôt en archive                                      | acceptedVersion ; cc-by-nc-nd ; 2021-01-01   |
+| deposit_condition    | les conditions pour le dépôt en archive                                      | publishedVersion ; cc-by ; 2 months   |
 | todo                 | action à réaliser manuellement                                               | selon licence ajouter PDF publisher          |
 
 <br />
@@ -77,7 +73,7 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 
 ### Statistiques
 
-Obtenues pour Université de Paris avec des DOIs de 2021 venant de Scopus
+Obtenues pour Université Paris Cité avec des DOIs de 2021 venant de Scopus
 ```
 nb de DOI a traiter                                     1062
 mailto auteur pour appliquer LRN                        564
@@ -96,3 +92,16 @@ notices créées                                          53
 
 
 Partagez les votres en issue dans github 
+
+
+-------
+
+Université Paris Cité
+
+* faculté S&H req scopus 
+
+`(AF-ID(60120303) OR AF-ID(60123643) OR AF-ID(60210180) OR AF-ID(60123161) OR AF-ID(60136261) OR AF-ID(60117541) OR AF-ID(60106086) OR AF-ID(60119214) OR AF-ID(60123637) OR AF-ID(60123696) OR AF-ID(60210118) OR AF-ID(60123629) OR AF-ID(60123670) OR AF-ID(60126107) OR AF-ID(60123675) OR AF-ID(60210117) OR AF-ID(60210182) OR AF-ID(60123642) OR AF-ID(60210166) OR AF-ID(60210148) OR AF-ID(60210170) OR AF-ID(60123662) OR AF-ID(60210181) OR AF-ID(60123653) OR AF-ID(60210168) OR AF-ID(60210171) OR AF-ID(60210144) OR AF-ID(60110966) OR AF-ID(60198731) OR AF-ID(60110705) OR AF-ID(60210157)`
+
+* faculté Sciences + IPGP req Scopus
+
+` AF-ID(60106184) OR AF-ID(60105477) OR AF-ID(60123679) OR AF-ID(60123680) OR AF-ID(60109179) OR AF-ID(60180341) OR AF-ID(60123773) OR AF-ID(60210112) OR AF-ID(60210114) OR AF-ID(60123709) OR AF-ID(60123712) OR AF-ID(60123710) OR AF-ID(60112048) OR AF-ID(60180347) OR AF-ID(60005370) OR AF-ID(60105746) OR AF-ID(60004833) OR AF-ID(60210214) OR AF-ID(60106138) OR AF-ID(60123660) OR AF-ID(60123640) OR AF-ID(60210110) OR AF-ID(60210113) OR AF-ID(60123672) OR AF-ID(60123663) OR AF-ID(60123666) OR AF-ID(60028894) OR AF-ID(60123652) OR AF-ID(60122451) OR AF-ID(60072945) OR AF-ID(60210266) OR AF-ID(60157983) OR AF-ID(60111003) OR AF-ID(60003174) OR AF-ID(60210111) OR AF-ID(60123671) OR AF-ID(60123695) OR AF-ID(60123705) OR AF-ID(60072969) OR AF-ID(60106185) OR AF-ID(60210186) OR AF-ID(60210184) OR AF-ID(60031186) OR AF-ID(60001970)`

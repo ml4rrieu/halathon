@@ -1,6 +1,8 @@
 import requests
 import pandas as pd
 
+
+
 SCANR_API_BASE = "https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/"
 def get_parents(structure_id):
     url = SCANR_API_BASE+"structures/search"
