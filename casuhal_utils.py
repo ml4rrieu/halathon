@@ -41,7 +41,7 @@ def enrich_w_hal(df) :
 
 
 def query_upw(doi) : 
-    req = requests.get( f"https://api.unpaywall.org/v2/{doi}?email=maxence.larrieu@u-paris.fr")
+    req = requests.get( f"https://api.unpaywall.org/v2/{doi}?email=hal.dbm@listes.u-paris.fr")
     res = req.json()
 
     # if not in upw

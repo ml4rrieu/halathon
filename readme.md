@@ -33,15 +33,15 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 ## Reproduire pour son établissement
 
 - Télécharger le .zip du projet
-- Renseigner votre email pour les requêtes Unpaywall dans le fichier _casuhal_utils.py_
+- Personnaliser _casuhal_utils.py_ : renseigner l'embargo maximal à considérer (l'enjeu est de savoir si la politique du publisher est plus permissive que la LRN), renseigner un email pour les requêtes unpaywall
 - Ouvrir le notebook  _2022_halathon.ipynb_ 
-- Réaliser toutes les étapes du notebook
+- Exécuter toutes les cellules
 - Ouvrir le tableau produit _data\dois_a_traiter_formula.csv_ avec libreOffice
 - Déposez massivement :boom::boom::boom:
 
 **Tester en ligne**
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke2.mybinder.org/user/ml4rrieu-halathon-j1jiw4ew/notebooks/2021_halathon.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke2.mybinder.org/user/ml4rrieu-halathon-j1jiw4ew/notebooks/2022_halathon.ipynb)
 
 
 <br />
