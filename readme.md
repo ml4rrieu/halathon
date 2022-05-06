@@ -1,5 +1,5 @@
 
-Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) permettant de repérer les publications d'un établissement pouvant être déposées en texte intégral dans HAL. Le code récupère des données sur les publications et déduit des actions à réaliser. Les actions sont à réaliser manuellement.
+Code initié dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) et repris lors de Halathons institutionnels. Le code repère les publications d'un établissement pouvant être déposées en texte intégral. Les données sur les publications sont récupérées (HAL, Unpaywall, Permissions de OA.Works) et des actions à réaliser sont déduites. Les actions sont à réaliser manuellement.
 
 
 ## Fonctionnement
@@ -8,23 +8,23 @@ Code réalisé dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciences
 
 Cinq actions, à réaliser manuellement, sont différenciées : 
 
-* **Récupérer le PDF publisher et mailto auteur pour accord** :green_book: :pencil: 
+* **Récuperer le PDF éditeur et écrire a l'auteur pour accord** :green_book: :pencil: 
 
 La publication n'est pas en accès ouvert mais la politique du publisher autorise le partage en archive de la version éditée (eg. la revue [Physical Review B](https://aurehal.archives-ouvertes.fr/journal/read/id/153339)). Reste alors à contacter l'auteur pour avoir son accord.
 
-*  **Selon licence ajouter PDF publisher** :green_book:
+*  **Selon la licence ajouter le PDF éditeur** :green_book:
 
-La publication est en accès ouvert sur le site du publisher avec la mention d'une licence. Si celle-ci le permet (eg. les Creative Commons) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation).
+La publication est en accès ouvert sur le site du publisher avec la mention d'une licence. Si celle-ci le permet (Creative Commons) ajouter le PDF dans HAL. Nota : le code cible les publications qui ne sont pas déjà dans une archive ouverte (logique de pérennisation).
 
-* **Mailto auteur pour appliquer LRN** :pencil:
+* **Ecrire à l'auteur pour appliquer la LRN** :pencil:
 
 La publication n'est pas en accès ouvert, solliciter l'auteur afin qu'il applique la Loi pour une République Numérique.
 
-* **Vérifier identifiants notice** :link:
+* **Vérifier les identifiants de la notice** :link:
 
 La publication est référencée dans HAL, elle est bien marquée _open access_ dans Unpaywall mais HAL n'a pas fait le lien (métadonnée *linkExtId*). Il faut alors vérifier les identifiants (DOI, Arxiv) de la notice.
 
-* **Créer/retrouver notice** :mag_right:
+* **Créer ou retrouver la notice** :mag_right:
 
 Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL afin de rectifier un éventuel oubli du DOI, créer la notice si nécessaire.
 
@@ -73,7 +73,20 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 
 ### Statistiques
 
-Obtenues pour Université Paris Cité avec des DOIs de 2021 venant de Scopus
+
+Halathon 2022 Université Paris Cité (Faculté Sciences + IPGP). Scopus. Limités aux 500 récentes publications. 
+```
+nb de DOI a traiter                                          329
+
+creer ou retrouver la notice                                 123
+ecrire a l auteur pour appliquer la LRN                      119
+selon la licence ajouter le PDF editeur                       66
+recuperer le PDF editeur et ecrire a l auteur pour accord     15
+verifier les identifiants de la notice                         2
+```
+
+
+CasuHalathon 2021 Université Paris Cité. Scopus.
 ```
 nb de DOI a traiter                                     1062
 mailto auteur pour appliquer LRN                        564
@@ -82,13 +95,14 @@ selon licence ajouter PDF publisher                     204
 verifier identifiants notice                              5
 recuperer PDF publisher et mailto auteur pour accord      5
 ```
-Traitements réalisés à Université de Paris (sur 3 semaines)
+Traitements réalisés sur 3 semaines
 ```
 DOI traités                                             200
 mails envoyés                                           96
 PDF publisher ajoutés                                   49
 notices créées                                          53
 ```
+
 
 
 Partagez les votres en issue dans github 

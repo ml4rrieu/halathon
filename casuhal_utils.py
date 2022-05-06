@@ -148,17 +148,24 @@ def add_permissions(row) :
     if repository and res.get("version") : 
         if "publishedVersion" in res["version"] : 
             print(f"{row.doi} publishedVersion accepted ! ouraaaaah ")
-            return f"publishedVersion ; {res.get('licence')} ; {res.get('embargo_months')}"
+            return f"publishedVersion ; {res.get('licence')} ; {res.get('embargo_months')} months"
 
     
-    ## si on peut deposer laccepted version dans un délai plus court que la loi
-    if repository and res.get("version") and res.get("embargo_months") :
+    ## si on peut deposer l'accepted version dans un délai plus court que la loi
+    if repository and res.get("version") :
         if "acceptedVersion" in res["version"] :
-            # fixer ici l'embargo en dessous duquel on récupère l'info
-            if isinstance(res["embargo_months"], int): # verifier l'embargo est bien du int
-                if res["embargo_months"] < 6 : 
-                    print(f"{row.doi} acceptedVersion embargo of {res.get('embargo_months')} months")
-                    return f"{res['version']} ; {res.get('licence')} ; {res.get('embargo_months')} months"
+            # si le champs embargo est absent
+            if not res.get("embargo_months") :
+                print(f"{row.doi} acceptedVersion , no embargo")
+                return f"{res['version']} ; {res.get('licence')} ; no months"
+            else : 
+                # s'assurer que l'embargo est bien du int
+                if isinstance(res["embargo_months"], int): 
+                    # ___PARAM___ fixer ici le nombre de mois d'embargo en dessous duquel l'info est récupérée
+                    if res["embargo_months"] < 6 : 
+                        print(f"{row.doi} acceptedVersion embargo of {res.get('embargo_months')} months")
+                        return f"{res['version']} ; {res.get('licence')} ; {res.get('embargo_months')} months"
+                    
 
 
 def deduce_todo(row) :
@@ -168,23 +175,23 @@ def deduce_todo(row) :
     
     #1. si possible archiver la publishedVersion 
     if "publishedVersion" in str(row["deposit_condition"]) :
-        return "recuperer PDF publisher et mailto auteur pour accord"
+        return "recuperer le PDF editeur et ecrire a l auteur pour accord"
 
     #2. si publisher license AND NOT oa via reop
     if row["oa_publisher_license"] and not row["oa_repo_link"] :
-        return "selon licence ajouter PDF publisher"
+        return "selon la licence ajouter le PDF editeur"
 
     #3. si LRN applicable envoyer email incitation
     if row["upw_state"] != "open" and row["has_issn"] : 
-        return "mailto auteur pour appliquer LRN"
+        return "ecrire a l auteur pour appliquer la LRN"
 
     #4. si c'est dans HAL, sans lien extérieur et pourtant dispo via upw
     if row["halId"] and row["linkExtId"] == "" and row["upw_state"] == "open" :
-        return "verifier identifiants notice"
+        return "verifier les identifiants de la notice"
 
     #4. si ce n'est pas dans HAL
     if row["halId"] == "" :
-        return "creer/retrouver notice"
+        return "creer ou retrouver la notice"
     
 
 
