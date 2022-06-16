@@ -1,12 +1,13 @@
-
-Code initié dans le cadre du [CasuHalathon 2021](https://casuhal2021.sciencesconf.org/resource/page/id/8) et repris lors de Halathons institutionnels. Le code repère les publications d'un établissement pouvant être déposées en texte intégral. Les données sur les publications sont récupérées (HAL, Unpaywall, Permissions de OA.Works) et des actions à réaliser sont déduites. Les actions sont à réaliser manuellement.
+HALathon : identifier automatiquement les publications pouvant être déposées dans HAL! Les données sur les publications sont récupérées (HAL, Unpaywall, Permissions de OA.Works) et des actions, à réaliser manuellement, sont déduites.
 
 
 ## Fonctionnement
 
-Étapes du code : 1. récupérer les DOIs de son établissement. Cela peut être effectué à l'aide d'un fichier local et/ou en utilisant l'API de ScanR. 2. enrichir les DOIs en utilisant HAL, Unpaywall et Permissions. 3. déduire à partir des données reccueillies des actions à réaliser. 
+1. Récupérer les DOIs de son établissement. A effectuer depuis un fichier local ou depuis l'API de ScanR
+2. Enrichir les données en utilisant HAL, Unpaywall et Permissions
+3. Déduire à partir des données reccueillies des actions à réaliser
 
-Cinq actions, à réaliser manuellement, sont différenciées : 
+## Actions déduites à réaliser manuellement
 
 * **Récuperer le PDF éditeur et écrire a l'auteur pour accord** :green_book: :pencil: 
 
@@ -62,11 +63,14 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 
 <br />
 
-### Outils
+### Outils et API utilisés
 
-- Script ScanR [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
 - [Unpaywall](https://www.unpaywall.org/)
 - [Permissions](https://shareyourpaper.org/permissions)
+- [HAL](https://api.archives-ouvertes.fr/docs)
+- Script ScanR [récupérer les DOI de son établissement](https://github.com/MinistereSupRecherche/bso/blob/master/notebooks/OA_perimetre_specifique.ipynb)
+
+
 
 <br />
 
@@ -74,7 +78,7 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 ### Statistiques
 
 
-Halathon 2022 Université Paris Cité (Faculté Sciences + IPGP). Scopus. Limités aux 500 récentes publications. 
+Halathon 2022-05 Université Paris Cité (Faculté Sciences + IPGP). Scopus. 500 récentes publications. 
 ```
 nb de DOI a traiter                                          329
 
@@ -86,7 +90,7 @@ verifier les identifiants de la notice                         2
 ```
 
 
-CasuHalathon 2021 Université Paris Cité. Scopus.
+CasuHalathon 2021-06 Université Paris Cité. Scopus. Publications de l'année
 ```
 nb de DOI a traiter                                     1062
 mailto auteur pour appliquer LRN                        564
@@ -95,27 +99,22 @@ selon licence ajouter PDF publisher                     204
 verifier identifiants notice                              5
 recuperer PDF publisher et mailto auteur pour accord      5
 ```
-Traitements réalisés sur 3 semaines
-```
-DOI traités                                             200
-mails envoyés                                           96
-PDF publisher ajoutés                                   49
-notices créées                                          53
-```
 
 
 
 Partagez les votres en issue dans github 
 
+<br />
+<br />
 
 -------
 
 Mémo Université Paris Cité
 
-* faculté S&H req scopus 
+* req scopus faculté S&H
 
 `(AF-ID(60120303) OR AF-ID(60123643) OR AF-ID(60210180) OR AF-ID(60123161) OR AF-ID(60136261) OR AF-ID(60117541) OR AF-ID(60106086) OR AF-ID(60119214) OR AF-ID(60123637) OR AF-ID(60123696) OR AF-ID(60210118) OR AF-ID(60123629) OR AF-ID(60123670) OR AF-ID(60126107) OR AF-ID(60123675) OR AF-ID(60210117) OR AF-ID(60210182) OR AF-ID(60123642) OR AF-ID(60210166) OR AF-ID(60210148) OR AF-ID(60210170) OR AF-ID(60123662) OR AF-ID(60210181) OR AF-ID(60123653) OR AF-ID(60210168) OR AF-ID(60210171) OR AF-ID(60210144) OR AF-ID(60110966) OR AF-ID(60198731) OR AF-ID(60110705) OR AF-ID(60210157)`
 
-* faculté Sciences + IPGP req Scopus
+* req Scopus faculté Sciences + IPGP
 
 ` AF-ID(60106184) OR AF-ID(60105477) OR AF-ID(60123679) OR AF-ID(60123680) OR AF-ID(60109179) OR AF-ID(60180341) OR AF-ID(60123773) OR AF-ID(60210112) OR AF-ID(60210114) OR AF-ID(60123709) OR AF-ID(60123712) OR AF-ID(60123710) OR AF-ID(60112048) OR AF-ID(60180347) OR AF-ID(60005370) OR AF-ID(60105746) OR AF-ID(60004833) OR AF-ID(60210214) OR AF-ID(60106138) OR AF-ID(60123660) OR AF-ID(60123640) OR AF-ID(60210110) OR AF-ID(60210113) OR AF-ID(60123672) OR AF-ID(60123663) OR AF-ID(60123666) OR AF-ID(60028894) OR AF-ID(60123652) OR AF-ID(60122451) OR AF-ID(60072945) OR AF-ID(60210266) OR AF-ID(60157983) OR AF-ID(60111003) OR AF-ID(60003174) OR AF-ID(60210111) OR AF-ID(60123671) OR AF-ID(60123695) OR AF-ID(60123705) OR AF-ID(60072969) OR AF-ID(60106185) OR AF-ID(60210186) OR AF-ID(60210184) OR AF-ID(60031186) OR AF-ID(60001970)`
