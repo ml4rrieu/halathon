@@ -1,4 +1,4 @@
-HALathon : identifier automatiquement les publications pouvant être déposées dans HAL! Les données sur les publications sont récupérées (HAL, Unpaywall, Permissions de OA.Works) et des actions, à réaliser manuellement, sont déduites.
+HALathon : identifier automatiquement les publications pouvant être déposées dans HAL! Les données sur les publications sont récupérées (HAL, [Unpaywall](https://unpaywall.org) et [Permissions](https://shareyourpaper.org/permissions) ) et des actions, à réaliser manuellement, sont déduites.
 
 
 ## Fonctionnement
@@ -78,6 +78,16 @@ Le DOI n'a pas été trouvé dans HAL. Faites une recherche par titre dans HAL a
 ### Statistiques
 
 
+Halathon 2023-05 Université Paris Cité (FacultéSanté ). Scopus
+```
+nb de DOI a traiter                                          905
+ecrire a l auteur pour appliquer la LRN                      428
+selon la licence ajouter le PDF editeur                      308
+creer ou retrouver la notice                                 135
+recuperer le PDF editeur et ecrire a l auteur pour accord     24
+verifier les identifiants de la notice                         5
+```
+
 Halathon 2022-05 Université Paris Cité (Faculté Sciences + IPGP). Scopus. 500 récentes publications. 
 ```
 nb de DOI a traiter                                          329
@@ -110,6 +120,12 @@ Partagez les votres en issue dans github
 -------
 
 Mémo Université Paris Cité
+
+* req Scopus Santé
+
+`
+AF-ID(60123803) OR AF-ID(60106282) OR AF-ID(60210102) OR AF-ID(60210145) OR AF-ID(60210142) OR AF-ID(60026040) OR AF-ID(60123678) OR AF-ID(60123713) OR AF-ID(60210107) OR AF-ID(60123665) OR AF-ID(60031594) OR AF-ID(60123804) OR AF-ID(60123784) OR AF-ID(60123816) OR AF-ID(60210101) OR AF-ID(60123697) OR AF-ID(60210185) OR AF-ID(60123774) OR AF-ID(60210109) OR AF-ID(60136279) OR AF-ID(60210100) OR AF-ID(60210108) OR AF-ID(60210169) OR AF-ID(60105728) OR AF-ID(60210154)
+`
 
 * req scopus faculté S&H
 

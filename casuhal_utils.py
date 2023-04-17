@@ -24,9 +24,13 @@ def query_hal(doi) :
         "linkExtId" : res["linkExtId_s"] if res.get("linkExtId_s") else ""
         }
 
+
+
 def print_progression(name, index, total) : 
     if total > 10 and index > 0 and index % (int(total/10)) == 0 : 
         print( f"{name} {round(index / total * 100)}% ")
+
+
 
 def enrich_w_hal(df) : 
             
@@ -41,6 +45,10 @@ def enrich_w_hal(df) :
 
 
 def query_upw(doi) : 
+
+    """
+    recupérer données dans Unpaywall
+    """
     req = requests.get( f"https://api.unpaywall.org/v2/{doi}?email=hal.dbm@listes.u-paris.fr")
     res = req.json()
 
@@ -120,7 +128,9 @@ def enrich_w_upw(df) :
 
 def add_permissions(row) : 
     """
-    ajouter les possibilité de dépôt via l'API persmission
+    ajouter les possibilité de dépôt en archvie via l'API persmission
+    https://shareyourpaper.org/permissions/about#api
+    exemple d'API https://api.openaccessbutton.org/permissions/10.1016/j.jogoh.2023.102582
 
     """
 
@@ -129,6 +139,7 @@ def add_permissions(row) :
         #print(f"{row.doi}\t has repo or publisher licence")
         return ""
 
+    ## vérifier les résultats de l'API
     try :
         req = requests.get(f"https://api.openaccessbutton.org/permissions/{row.doi}")
         res = req.json()
@@ -137,23 +148,29 @@ def add_permissions(row) :
         print("doi problem w permissions", row.doi)
         return "" 
 
-    # s'assurer que repo est bien en location
+    # s'assurer que repository est bien mentionné dans les "location"
     repository = False
-    if res.get("locations") : 
-        all_loc = " ".join(res["locations"])
-        if "Repository" in all_loc : 
+    if res.get("locations") :
+        locations_cut = []
+        for item in res["locations"] : 
+            for word in item.split(" "): 
+                locations_cut.append(word.lower())
+
+        if "repository" in locations_cut : 
             repository = True
+            #print(f"has repo in locations}")
 
     # si published version autorisé récupérer licence & embargo
-    if repository and res.get("version") : 
-        if "publishedVersion" in res["version"] : 
-            print(f"{row.doi} publishedVersion accepted ! ouraaaaah ")
+    if repository and res.get("versions") : 
+        if "publishedVersion" in res["versions"] : 
+            print(f"{row.doi} publishedVersion can be shared 🎉")
             return f"publishedVersion ; {res.get('licence')} ; {res.get('embargo_months')} months"
 
     
     ## si on peut deposer l'accepted version dans un délai plus court que la loi
-    if repository and res.get("version") :
-        if "acceptedVersion" in res["version"] :
+    if repository and res.get("versions") :
+        if "acceptedVersion" in res["versions"] :
+
             # si le champs embargo est absent
             if not res.get("embargo_months") :
                 print(f"{row.doi} acceptedVersion , no embargo")
@@ -210,41 +227,3 @@ def addCaclLinkFormula (pre_url, post_url, txt) :
         return '=LIEN.HYPERTEXTE("'+pre_url + post_url + '";"' + txt + '")' 
 
 
-
-## ____________old________________
-
-# def query_perm(doi) :
-#     """
-#     # retrieve data from permission API https://api.openaccessbutton.org/permissions
-#     """ 
-    
-#     try :
-#         req = requests.get(f"https://api.openaccessbutton.org/permissions/{doi}")
-#         res = req.json()
-#     except : 
-#         print("doi problem w permissions", doi)
-#         return {}
-    
-
-#     # avancer dans l'arborescence
-#     res = res["best_permission"]
-
-#     # s'assurer que le lieu de dépôt est bien un entrepot
-#     repository = False
-#     if "Repository" in res.get("locations") : 
-#         repository = True
-
-
-#     ## si published version , récupérer licence & embargo
-#     if repository and res.get("version") == "publishedVersion" : 
-#         print(f"{doi} publishedVersion accepted ! ouraaaaah ")
-#         return {
-#             "deposit_condition" : "publishedVersion" + " ; " + res.get("licence") + " ; " + res.get("embargo_months")
-#         }
-
-#     ## si les droits s'exercent sur l'acceptedVersion et que l'embarbo est moindre que la LRN
-#     if repository and res.get("version") == "acceptedVersion" and res.get("embargo_months") < 12 : 
-#         print(f"{doi} acceptedVersion embargo of {res['embargo_months']} months")
-#         return {
-#             "deposit_condition" : res["version"] + " ; " + res.get("licence") + " ; " + str(res["embargo_months"]) + " months"
-#         }
