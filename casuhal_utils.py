@@ -17,11 +17,14 @@ def query_hal(doi) :
             print("")"""
 
         res = res['response']['docs'][0]
-        #print("data from 1st doc is \n", res)      
+        #print("data from 1st doc is \n", res)
+
         return{
-        "halId" : res["halId_s"],
-        "submitType" : res['submitType_s'],
-        "linkExtId" : res["linkExtId_s"] if res.get("linkExtId_s") else ""
+            "halId" : res["halId_s"],
+            "submitType" : res['submitType_s'],
+
+            # utilse uniquement pour retracer la présence de l'accès ouvert
+            "linkExtId" : res["linkExtId_s"] if res.get("linkExtId_s") else ""
         }
 
 
@@ -66,11 +69,11 @@ def query_upw(doi) :
 
     # if it is open     
     temp = {
-    "upw_state" : "open",
-    "published_date" : res.get("published_date"),
-    "oa_publisher_license" : "",
-    "oa_publisher_link" : "", 
-    "oa_repo_link" : ""
+        "upw_state" : "open",
+        "published_date" : res.get("published_date"),
+        "oa_publisher_license" : "",
+        "oa_publisher_link" : "", 
+        "oa_repo_link" : ""
     }
     #print(f"nb of location { len(res['oa_locations']) }")
 
